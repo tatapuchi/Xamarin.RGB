@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "CfqQpccI8jZ4y4LxzVTNCeAwibukmuwEcXcUww+V6bgfNUYUxnP6/qsYqvysrb56q2vp4WqiqtKH4c8i2nPN6Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Aorus\\source\\repos\\Xamarin.RGB\\Xamarin.RGB\\Xamarin.RGB.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Aorus\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Aorus\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Aorus\\.nuget\\packages\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
+  ],
+  "logs": []
+}
