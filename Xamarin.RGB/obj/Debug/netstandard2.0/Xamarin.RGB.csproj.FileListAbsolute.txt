@@ -7,3 +7,4 @@ C:\Users\Aorus\source\repos\Xamarin.RGB\Xamarin.RGB\obj\Debug\netstandard2.0\Xam
 C:\Users\Aorus\source\repos\Xamarin.RGB\Xamarin.RGB\obj\Debug\netstandard2.0\Xamarin.RGB.dll
 C:\Users\Aorus\source\repos\Xamarin.RGB\Xamarin.RGB\obj\Debug\netstandard2.0\Xamarin.RGB.pdb
 C:\Users\Aorus\source\repos\Xamarin.RGB\Xamarin.RGB\bin\Debug\netstandard2.0\Xamarin.RGB.xml
+C:\Users\Aorus\source\repos\Xamarin.RGB\Xamarin.RGB\obj\Debug\netstandard2.0\Xamarin.RGB.csprojAssemblyReference.cache

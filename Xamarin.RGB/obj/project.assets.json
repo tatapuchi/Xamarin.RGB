@@ -418,7 +418,7 @@
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "1.0.2",
     "restore": {
       "projectUniqueName": "C:\\Users\\Aorus\\source\\repos\\Xamarin.RGB\\Xamarin.RGB\\Xamarin.RGB.csproj",
       "projectName": "Xamarin.RGB",
