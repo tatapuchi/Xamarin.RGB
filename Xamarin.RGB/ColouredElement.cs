@@ -33,7 +33,5 @@ namespace Xamarin.RGB
         public Offset TextColorOffset { get; set; } = new Offset(0,0,0,0);
 
         public Offset PlaceholderColorOffset { get; set; } = new Offset(0, 0, 0, 0);
-
-
     }
 }
