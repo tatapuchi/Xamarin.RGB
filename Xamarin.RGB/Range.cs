@@ -25,7 +25,7 @@ namespace Xamarin.RGB
         /// <summary>
         /// Start value of the range.
         /// </summary>
-        public double Start { get; }
+        public double Start { get; }; 
 
         /// <summary>
         /// End value of the range.

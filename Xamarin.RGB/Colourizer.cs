@@ -15,9 +15,15 @@ namespace Xamarin.RGB
         public double Saturation { get; set; } = 1f;
         public double Luminosity { get; set; } = 0.5f;
         public double Alpha { get; set; } = 1f;
+        public Range HueRange { get; set; } = new Range(0, 1);
+        public Range SaturationRange { get; set; } = new Range(0, 1);
+        public Range LuminosityRange { get; set; } = new Range(0, 1);
+        public Range AlphaRange { get; set; } = new Range(0, 1);
+
         public void UpdateColor()
         {
             throw new NotImplementedException();
         }
+
     }
 }
