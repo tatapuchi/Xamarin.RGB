@@ -23,6 +23,7 @@ namespace Xamarin.RGB
         public double ComputeValue(double value, double offset)
         {
             if((value + offset) < 1) { return value + offset; }
+            else { return (value + offset) - 1; }
 
         }
     }
