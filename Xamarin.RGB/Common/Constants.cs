@@ -4,25 +4,19 @@ using System.Text;
 
 namespace Xamarin.RGB
 {
-
     public static class Constants
     {
 
         public static int Slow_Speed = 200;
-
         public static int Medium_Speed = 100;
-
         public static int Fast_Speed = 20;
 
+
         public static Range Red_Yellow = new Range();
-
         public static Range Green_Blue = new Range();
-
         public static Range Purple_Red = new Range();
 
-
     }
-
 
     public enum CycleStyle
     {
@@ -49,5 +43,4 @@ namespace Xamarin.RGB
         TextColour = 1 << 1,
         PlaceholderColour = 1 << 2
     }
-
 }

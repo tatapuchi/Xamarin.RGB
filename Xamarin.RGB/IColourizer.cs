@@ -7,7 +7,7 @@ namespace Xamarin.RGB
     public interface IColourizer
     {
         public CycleStyle CycleStyle { get; set; }
-        public ChangeTypes ChangeFlages { get; set; }
+        public ChangeTypes ChangeFlags { get; set; }
         public ColourizerTypes ColourizerFlags { get; set; }
 
         public int Speed { get; set; }
@@ -20,6 +20,7 @@ namespace Xamarin.RGB
         public double Alpha { get; set; }
         public Range AlphaRange { get; set; }
 
-        public void UpdateColor();
+        public void UpdateColorValues();
+        public void Add(ColouredElement element);
     }
 }

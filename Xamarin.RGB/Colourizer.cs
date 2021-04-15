@@ -1,28 +1,62 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace Xamarin.RGB
 {
     public class Colourizer : IColourizer
     {
-        public CycleStyle CycleStyle { get; set; } = CycleStyle.Forwards;
-        public ChangeTypes ChangeFlages { get; set; } = ChangeTypes.Hue;
-        public ColourizerTypes ColourizerFlags { get; set; } = ColourizerTypes.BackgroundColor;
+        private List<ColouredElement> elements = new List<ColouredElement>();
+
 
         public int Speed { get; set; } = 100;
-        public double Hue { get; set; } = 0f;
-        public double Saturation { get; set; } = 1f;
-        public double Luminosity { get; set; } = 0.5f;
-        public double Alpha { get; set; } = 1f;
-        public Range HueRange { get; set; } = new Range(0, 1);
-        public Range SaturationRange { get; set; } = new Range(0, 1);
-        public Range LuminosityRange { get; set; } = new Range(0, 1);
-        public Range AlphaRange { get; set; } = new Range(0, 1);
 
-        public void UpdateColor()
+        #region Colour Properties
+        private double _hue = 0f;
+        public double Hue { get => _hue; set => _hue = value; }
+
+        private double _saturation = 1f;
+        public double Saturation { get => _saturation; set => _saturation = value; }
+
+        private double _luminosity = 0.5f;
+        public double Luminosity { get => _luminosity; set => _luminosity = value; }
+
+        private double _alpha = 1f;
+        public double Alpha { get => _alpha; set => _alpha = value; }
+
+        #endregion
+
+
+        public Colourizer()
         {
-            throw new NotImplementedException();
+            Task.Run(async () =>
+            {
+
+                while (true)
+                {
+                    UpdateColorValues();
+
+                    Device.BeginInvokeOnMainThread(() =>
+                    {
+                        foreach (var e in elements)
+                        {
+
+                            //e.BackgroundColor = Color.FromHsla(Hue, Saturation, Lightness, Alpha);+
+                            e.Colourize(Color.FromHsla(Hue, Saturation, Luminosity, Alpha));
+                        }
+                    });
+
+                    await Task.Delay(Speed);
+                }
+            });
+
+        }
+
+        public void Add(ColouredElement element)
+        {
+            elements.Add(element);
         }
 
     }

@@ -4,16 +4,9 @@ using System.Text;
 
 namespace Xamarin.RGB
 {
-    /// <summary>
-    /// Struct to define a range in between 0 and 1 for you colour cycling.
-    /// </summary>
     public struct Range
     {
-        /// <summary>
-        /// Constructor with start and end value parameters for the range.
-        /// </summary>
-        /// <param name="start">Start value of your range.</param>
-        /// <param name="end">End value of your range.</param>
+        public static Range FullRange = new Range(0, 1);
         public Range(double start, double end)
         {
             if (start < 0 || start > 1 || end < 0 || end > 1) { throw new ArgumentException(); }
@@ -22,20 +15,10 @@ namespace Xamarin.RGB
             End = end;
         }
 
-        /// <summary>
-        /// Start value of the range.
-        /// </summary>
-        public double Start { get; }; 
-
-        /// <summary>
-        /// End value of the range.
-        /// </summary>
+        public double Start { get; }
         public double End { get; }
+        public double Magnitude { get { return End - Start; } }
 
-        /// <summary>
-        /// ToString() override.
-        /// </summary>
-        /// <returns>A string indicating the range.</returns>
         public override string ToString() => $"From {Start} to {End}";
     }
 
