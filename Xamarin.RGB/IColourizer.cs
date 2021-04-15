@@ -6,5 +6,13 @@ namespace Xamarin.RGB
 {
     public interface IColourizer
     {
+        public int Speed { get; set; }
+        public double Hue { get; set; }
+        public double Saturation { get; set; }
+        public double Luminosity { get; set; }
+        public double Alpha { get; set; }
+
+
+        public void UpdateColor();
     }
 }
