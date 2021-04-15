@@ -18,5 +18,12 @@ namespace Xamarin.RGB
             LuminosityOffset = luminosityOffset;
             AlphaOffset = alphaOffset;
         }
+
+
+        public double ComputeValue(double value, double offset)
+        {
+            if((value + offset) < 1) { return value + offset; }
+
+        }
     }
 }
