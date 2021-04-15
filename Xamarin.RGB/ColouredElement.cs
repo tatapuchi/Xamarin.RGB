@@ -12,6 +12,11 @@ namespace Xamarin.RGB
         private readonly VisualElement _element;
         private readonly Entry _entry;
 
+        public ColouredElement()
+        {
+            // needs to check its children
+        }
+
         public ColouredElement(VisualElement element)
         {
             _element = element;
