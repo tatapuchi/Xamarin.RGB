@@ -10,13 +10,15 @@ namespace Xamarin.RGB
     public class ColouredElement : ContentView
     {
         private readonly VisualElement _element;
+        private readonly Entry _entry;
 
         public ColouredElement(VisualElement element)
         {
             _element = element;
+            if(element is Entry) { _entry = element as Entry; }
         }
 
-        public Offset BackgroundOffset { get; set; }
+        public Offset BackgroundOffset { get; set; } = new Offset(0, 0, 0, 0);
         public Color BackgroundColor { 
             get { return _element.BackgroundColor; }
             set { 
@@ -28,6 +30,9 @@ namespace Xamarin.RGB
             }
         }
 
+        public Offset TextColorOffset { get; set; } = new Offset(0,0,0,0);
+
+        public Offset PlaceholderColorOffset { get; set; } = new Offset(0, 0, 0, 0);
 
 
     }
