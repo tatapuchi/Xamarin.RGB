@@ -24,6 +24,7 @@ namespace Xamarin.RGB
             set { SetValue(SpeedProperty, value); }
         }
 
+        #region Colour Properties
         #region BackgroundColor Range Properties
         public static readonly BindableProperty BackgroundHueRangeProperty =
             BindableProperty.Create("BackgroundHueRange", typeof(Range), typeof(ColouredElement), Range.FullRange);
@@ -55,6 +56,40 @@ namespace Xamarin.RGB
         {
             get { return (Range)GetValue(BackgroundAlphaRangeProperty); }
             set { SetValue(BackgroundAlphaRangeProperty, value); }
+        }
+        #endregion
+
+        #region TextColor Range Properties
+        public static readonly BindableProperty TextHueRangeProperty =
+            BindableProperty.Create("TextHueRange", typeof(Range), typeof(ColouredElement), Range.FullRange);
+        public Range TextHueRange
+        {
+            get { return (Range)GetValue(TextHueRangeProperty); }
+            set { SetValue(TextHueRangeProperty, value); }
+        }
+
+        public static readonly BindableProperty TextSaturationRangeProperty =
+            BindableProperty.Create("TextSaturationRange", typeof(Range), typeof(ColouredElement), Range.FullRange);
+        public Range TextSaturationRange
+        {
+            get { return (Range)GetValue(TextSaturationRangeProperty); }
+            set { SetValue(TextSaturationRangeProperty, value); }
+        }
+
+        public static readonly BindableProperty TextLuminosityRangeProperty =
+    BindableProperty.Create("TextLuminosityRange", typeof(Range), typeof(ColouredElement), Range.FullRange);
+        public Range TextLuminosityRange
+        {
+            get { return (Range)GetValue(TextLuminosityRangeProperty); }
+            set { SetValue(TextLuminosityRangeProperty, value); }
+        }
+
+        public static readonly BindableProperty TextAlphaRangeProperty =
+            BindableProperty.Create("TextAlphaRange", typeof(Range), typeof(ColouredElement), Range.FullRange);
+        public Range TextAlphaRange
+        {
+            get { return (Range)GetValue(TextAlphaRangeProperty); }
+            set { SetValue(TextAlphaRangeProperty, value); }
         }
         #endregion
 
@@ -126,6 +161,7 @@ namespace Xamarin.RGB
             set { SetValue(StyleProperty, value); }
         }
         #endregion
+        #endregion
 
         public ColouredElement()
         {
@@ -139,6 +175,8 @@ namespace Xamarin.RGB
 
                     Device.BeginInvokeOnMainThread(() =>
                     {
+
+
 
                     });
 
