@@ -93,6 +93,40 @@ namespace Xamarin.RGB
         }
         #endregion
 
+        #region PlaceholderColor Range Properties
+        public static readonly BindableProperty PlaceholderHueRangeProperty =
+            BindableProperty.Create("PlaceholderHueRange", typeof(Range), typeof(ColouredElement), Range.FullRange);
+        public Range PlaceholderHueRange
+        {
+            get { return (Range)GetValue(PlaceholderHueRangeProperty); }
+            set { SetValue(PlaceholderHueRangeProperty, value); }
+        }
+
+        public static readonly BindableProperty PlaceholderSaturationRangeProperty =
+            BindableProperty.Create("PlaceholderSaturationRange", typeof(Range), typeof(ColouredElement), Range.FullRange);
+        public Range PlaceholderSaturationRange
+        {
+            get { return (Range)GetValue(PlaceholderSaturationRangeProperty); }
+            set { SetValue(PlaceholderSaturationRangeProperty, value); }
+        }
+
+        public static readonly BindableProperty PlaceholderLuminosityRangeProperty =
+    BindableProperty.Create("PlaceholderLuminosityRange", typeof(Range), typeof(ColouredElement), Range.FullRange);
+        public Range PlaceholderLuminosityRange
+        {
+            get { return (Range)GetValue(PlaceholderLuminosityRangeProperty); }
+            set { SetValue(PlaceholderLuminosityRangeProperty, value); }
+        }
+
+        public static readonly BindableProperty PlaceholderAlphaRangeProperty =
+            BindableProperty.Create("PlaceholderAlphaRange", typeof(Range), typeof(ColouredElement), Range.FullRange);
+        public Range PlaceholderAlphaRange
+        {
+            get { return (Range)GetValue(PlaceholderAlphaRangeProperty); }
+            set { SetValue(PlaceholderAlphaRangeProperty, value); }
+        }
+        #endregion
+
         #region Colorization Types
         public static readonly BindableProperty HueProperty =
             BindableProperty.Create("Hue", typeof(bool), typeof(ColouredElement), true);
