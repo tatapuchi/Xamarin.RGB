@@ -24,6 +24,40 @@ namespace Xamarin.RGB
             set { SetValue(SpeedProperty, value); }
         }
 
+        #region BackgroundColor Range Properties
+        public static readonly BindableProperty BackgroundHueRangeProperty =
+            BindableProperty.Create("BackgroundHueRange", typeof(Range), typeof(ColouredElement), Range.FullRange);
+        public Range BackgroundHueRange
+        {
+            get { return (Range)GetValue(BackgroundHueRangeProperty); }
+            set { SetValue(BackgroundHueRangeProperty, value); }
+        }
+
+        public static readonly BindableProperty BackgroundSaturationRangeProperty =
+            BindableProperty.Create("BackgroundSaturationRange", typeof(Range), typeof(ColouredElement), Range.FullRange);
+        public Range BackgroundSaturationRange
+        {
+            get { return (Range)GetValue(BackgroundSaturationRangeProperty); }
+            set { SetValue(BackgroundSaturationRangeProperty, value); }
+        }
+
+        public static readonly BindableProperty BackgroundLuminosityRangeProperty =
+    BindableProperty.Create("BackgroundLuminosityRange", typeof(Range), typeof(ColouredElement), Range.FullRange);
+        public Range BackgroundLuminosityRange
+        {
+            get { return (Range)GetValue(BackgroundLuminosityRangeProperty); }
+            set { SetValue(BackgroundLuminosityRangeProperty, value); }
+        }
+
+        public static readonly BindableProperty BackgroundAlphaRangeProperty =
+            BindableProperty.Create("BackgroundAlphaRange", typeof(Range), typeof(ColouredElement), Range.FullRange);
+        public Range BackgroundAlphaRange
+        {
+            get { return (Range)GetValue(BackgroundAlphaRangeProperty); }
+            set { SetValue(BackgroundAlphaRangeProperty, value); }
+        }
+        #endregion
+
         #region Colorization Types
         public static readonly BindableProperty HueProperty =
             BindableProperty.Create("Hue", typeof(bool), typeof(ColouredElement), true);

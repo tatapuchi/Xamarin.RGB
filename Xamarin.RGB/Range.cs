@@ -6,6 +6,8 @@ namespace Xamarin.RGB
 {
     public struct Range
     {
+        public static Range FullRange = new Range(0, 1);
+        public static Range HalfRange = new Range(0, 1);
         public Range(double start, double end)
         {
             if (start < 0 || start > 1 || end < 0 || end > 1) { throw new ArgumentException(); }
