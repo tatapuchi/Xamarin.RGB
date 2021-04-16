@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout>
             
-            <local:ColouredElement>
+            <local:ColouredElement TextColor="True">
                 <Label Text="Welcome to Xamarin.Forms!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />

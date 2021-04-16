@@ -8,24 +8,16 @@ namespace Xamarin.RGB
     {
         //Check that these values are positive and not bigger than Range.Magnitude
         public double HueOffset { get; set; }
-        public Range HueRange { get; set; }
         public double SaturationOffset { get; set; }
-        public Range SaturationRange { get; set; }
         public double LuminosityOffset { get; set; }
-        public Range LuminosityRange { get; set; }
         public double AlphaOffset { get; set; }
-        public Range AlphaRange { get; set; }
 
-        public Offset(double hueOffset, Range hueRange,  double saturationOffset, Range saturationRange, double luminosityOffset, Range luminosityRange, double alphaOffset, Range alphaRange)
+        public Offset(double hueOffset, double saturationOffset, double luminosityOffset, double alphaOffset)
         {
             HueOffset = hueOffset;
-            HueRange = hueRange;
             SaturationOffset = saturationOffset;
-            SaturationRange = saturationRange;
             LuminosityOffset = luminosityOffset;
-            LuminosityRange = luminosityRange;
             AlphaOffset = alphaOffset;
-            AlphaRange = alphaRange;
         }
 
         public static double ComputeValue(double value, double offset, Range range)

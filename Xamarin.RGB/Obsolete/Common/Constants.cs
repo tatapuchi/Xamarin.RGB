@@ -18,13 +18,6 @@ namespace Xamarin.RGB
 
     }
 
-    public enum CycleStyle
-    {
-        Forwards,
-        Backwards,
-        Breathing
-    }
-
     [Flags]
     public enum ChangeTypes
     {

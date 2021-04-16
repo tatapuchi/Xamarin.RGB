@@ -2,156 +2,127 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace Xamarin.RGB
 {
-    public class ColouredElement : ContentView
+    public class ColouredElement : ContentView, IColoured
     {
         private VisualElement _element;
+        private Label _label;
         private Entry _entry;
         private Editor _editor;
-        private Label _label;
         private Button _button;
+
+
+        public static readonly BindableProperty SpeedProperty =
+            BindableProperty.Create("Speed", typeof(int), typeof(ColouredElement), 100);
+        public int Speed
+        {
+            get { return (int)GetValue(SpeedProperty); }
+            set { SetValue(SpeedProperty, value); }
+        }
+
+        #region Colorization Types
+        public static readonly BindableProperty HueProperty =
+            BindableProperty.Create("Hue", typeof(bool), typeof(ColouredElement), true);
+        public bool Hue
+        {
+            get { return (bool)GetValue(HueProperty); }
+            set { SetValue(HueProperty, value); }
+        }
+
+
+        public static readonly BindableProperty SaturationProperty =
+            BindableProperty.Create("Saturation", typeof(bool), typeof(ColouredElement), false);
+        public bool Saturation
+        {
+            get { return (bool)GetValue(SaturationProperty); }
+            set { SetValue(SaturationProperty, value); }
+        }
+
+        public static readonly BindableProperty LuminosityProperty =
+            BindableProperty.Create("Luminosity", typeof(bool), typeof(ColouredElement), false);
+        public bool Luminosity
+        {
+            get { return (bool)GetValue(LuminosityProperty); }
+            set { SetValue(LuminosityProperty, value); }
+        }
+
+        public static readonly BindableProperty AlphaProperty =
+            BindableProperty.Create("Alpha", typeof(bool), typeof(ColouredElement), false);
+        public bool Alpha
+        {
+            get { return (bool)GetValue(AlphaProperty); }
+            set { SetValue(AlphaProperty, value); }
+        }
+
+
+        public static readonly BindableProperty BackgroundColorProperty =
+            BindableProperty.Create("BackgroundColor", typeof(bool), typeof(ColouredElement), true);
+        public bool BackgroundColor
+        {
+            get { return (bool)GetValue(BackgroundColorProperty); }
+            set { SetValue(BackgroundColorProperty, value); }
+        }
+
+        public static readonly BindableProperty TextColorProperty =
+            BindableProperty.Create("TextColor", typeof(bool), typeof(ColouredElement), false);
+        public bool TextColor
+        {
+            get { return (bool)GetValue(TextColorProperty); }
+            set { SetValue(TextColorProperty, value); }
+        }
+
+        public static readonly BindableProperty PlaceholderColorProperty =
+            BindableProperty.Create("PlaceholderColor", typeof(bool), typeof(ColouredElement), false);
+        public bool PlaceholderColor
+        {
+            get { return (bool)GetValue(PlaceholderColorProperty); }
+            set { SetValue(PlaceholderColorProperty, value); }
+        }
+
+
+        public static readonly BindableProperty StyleProperty =
+            BindableProperty.Create("Style", typeof(CycleStyle), typeof(ColouredElement), false);
+        public CycleStyle Style
+        {
+            get { return (CycleStyle)GetValue(StyleProperty); }
+            set { SetValue(StyleProperty, value); }
+        }
+        #endregion
 
         public ColouredElement()
         {
-        }
 
-        #region Enums
-        public CycleStyle CycleStyle { get; set; } = CycleStyle.Forwards;
-        public ChangeTypes ChangeFlags { get; set; } = ChangeTypes.Hue;
-        public ColourizerTypes ColourizerFlags { get; set; } = ColourizerTypes.BackgroundColor;
-        #endregion
-
-        #region Colour Properties
-        public Offset BackgroundOffset { get; set; } = new Offset(0, Range.FullRange, 0, Range.FullRange, 0, Range.FullRange, 0, Range.FullRange);
-
-        //Adds the offset value to the color
-        public Color BackgroundColor { 
-            get {
-                Ctor();
-                return _element.BackgroundColor; 
-            }
-            set {
-                Ctor();
-                var hue = Offset.ComputeValue(value.Hue, BackgroundOffset.HueOffset, BackgroundOffset.HueRange);
-                var saturation = Offset.ComputeValue(value.Saturation, BackgroundOffset.SaturationOffset, BackgroundOffset.SaturationRange);
-                var luminosity = Offset.ComputeValue(value.Luminosity, BackgroundOffset.LuminosityOffset, BackgroundOffset.LuminosityRange);
-                var alpha = Offset.ComputeValue(value.A, BackgroundOffset.AlphaOffset, BackgroundOffset.AlphaRange);
-                _element.BackgroundColor = Color.FromHsla(hue, saturation, luminosity, alpha);
-            }
-        }
-
-        public Offset TextColorOffset { get; set; } = new Offset(0, Range.FullRange, 0, Range.FullRange, 0, Range.FullRange, 0, Range.FullRange);
-
-        //Adds the offset value to the color
-        public Color TextColor 
-        { 
-            get
+            Task.Run(async () =>
             {
                 Ctor();
-                if (Content is Entry) { return _entry.TextColor; }
-                if (Content is Editor) { return _editor.TextColor; }
-                if (Content is Label) { return _label.TextColor; }
-                if (Content is Button) { return _button.TextColor; }
-            
-                return Color.Transparent;
-            }
+                while (true)
+                {
 
-            set
-            {
-                Ctor();
-                var hue = Offset.ComputeValue(value.Hue, TextColorOffset.HueOffset, TextColorOffset.HueRange);
-                var saturation = Offset.ComputeValue(value.Saturation, TextColorOffset.SaturationOffset, TextColorOffset.SaturationRange);
-                var luminosity = Offset.ComputeValue(value.Luminosity, TextColorOffset.LuminosityOffset, TextColorOffset.LuminosityRange);
-                var alpha = Offset.ComputeValue(value.A, TextColorOffset.AlphaOffset, TextColorOffset.AlphaRange);
 
-                if (Content is Entry) { _entry.TextColor = Color.FromHsla(hue, saturation, luminosity, alpha); }
-                if (Content is Editor) { _editor.TextColor = Color.FromHsla(hue, saturation, luminosity, alpha); }
-                if (Content is Label) { _label.TextColor = Color.FromHsla(hue, saturation, luminosity, alpha); }
-                if (Content is Button) { _button.TextColor = Color.FromHsla(hue, saturation, luminosity, alpha); }
-            }
+                    Device.BeginInvokeOnMainThread(() =>
+                    {
+
+                    });
+
+                    await Task.Delay(Speed);
+                }
+
+
+            });
 
         }
 
-        public Offset PlaceholderColorOffset { get; set; } = new Offset(0, Range.FullRange, 0, Range.FullRange, 0, Range.FullRange, 0, Range.FullRange);
-        #endregion
-
-        public void Colourize(Color color)
+        public void Ctor()
         {
-            if (ColourizerFlags.HasFlag(ColourizerTypes.BackgroundColor)) 
-            { 
-                BackgroundColor = color; 
-            }
-
-            if (ColourizerFlags.HasFlag(ColourizerTypes.TextColour)) 
-            {
-                //if transparent then hasnt been set, meaning no such value exists
-                if (TextColor != Color.Transparent) { TextColor = color; }
-            }
-
-            if (ColourizerFlags.HasFlag(ColourizerTypes.PlaceholderColour)) 
-            { 
-                //TODO 
-            }
-
-        }
-
-        public void UpdateColorValues(ref double value, Range range)
-        {
-            if (ChangeFlags.HasFlag(ChangeTypes.Hue))
-            {
-                
-                CycleColour(ref value, range);
-            }
-
-            if (ChangeFlags.HasFlag(ChangeTypes.Saturation))
-            {
-                CycleColour(ref value, range);
-            }
-
-            if (ChangeFlags.HasFlag(ChangeTypes.Luminosity))
-            {
-                CycleColour(ref value, range);
-            }
-
-            if (ChangeFlags.HasFlag(ChangeTypes.Alpha))
-            {
-                CycleColour(ref value, range);
-            }
-
-        }
-
-        public void CycleColour(ref double value, Range range)
-        {
-            if (CycleStyle == CycleStyle.Forwards)
-            {
-                if (value > (range.End - 0.002)) { value = range.Start; }
-                value += 0.001;
-            }
-
-            if (CycleStyle == CycleStyle.Backwards)
-            {
-                if (value > (range.Start + 0.002)) { value = range.End; }
-                value -= 0.001;
-            }
-
-            if (CycleStyle == CycleStyle.Breathing)
-            {
-                //will implement in a bit
-            }
-        }
-
-        private void Ctor()
-        {
-            if (_element != null) { return; }
-            // needs to check its children
+            if(_element != null) { return; }
             _element = Content;
+            if(Content is Label) { _label = Content as Label; }
             if (Content is Entry) { _entry = Content as Entry; }
             if (Content is Editor) { _editor = Content as Editor; }
-            if (Content is Label) { _label = Content as Label; }
             if (Content is Button) { _button = Content as Button; }
         }
 
