@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Vibhor Singh\\Source\\Repos\\Xamarin.Colourizers\\Xamarin.RGB\\Xamarin.RGB.csproj": {}
+    "C:\\Users\\Aorus\\source\\repos\\Xamarin.RGB\\Xamarin.RGB\\Xamarin.RGB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Vibhor Singh\\Source\\Repos\\Xamarin.Colourizers\\Xamarin.RGB\\Xamarin.RGB.csproj": {
+    "C:\\Users\\Aorus\\source\\repos\\Xamarin.RGB\\Xamarin.RGB\\Xamarin.RGB.csproj": {
       "version": "1.0.2",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vibhor Singh\\Source\\Repos\\Xamarin.Colourizers\\Xamarin.RGB\\Xamarin.RGB.csproj",
+        "projectUniqueName": "C:\\Users\\Aorus\\source\\repos\\Xamarin.RGB\\Xamarin.RGB\\Xamarin.RGB.csproj",
         "projectName": "Xamarin.RGB",
-        "projectPath": "C:\\Users\\Vibhor Singh\\Source\\Repos\\Xamarin.Colourizers\\Xamarin.RGB\\Xamarin.RGB.csproj",
-        "packagesPath": "C:\\Users\\Vibhor Singh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vibhor Singh\\Source\\Repos\\Xamarin.Colourizers\\Xamarin.RGB\\obj\\",
+        "projectPath": "C:\\Users\\Aorus\\source\\repos\\Xamarin.RGB\\Xamarin.RGB\\Xamarin.RGB.csproj",
+        "packagesPath": "C:\\Users\\Aorus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Aorus\\source\\repos\\Xamarin.RGB\\Xamarin.RGB\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Vibhor Singh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Aorus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
