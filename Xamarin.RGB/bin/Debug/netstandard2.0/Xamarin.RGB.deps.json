@@ -7,7 +7,7 @@
   "targets": {
     ".NETStandard,Version=v2.0": {},
     ".NETStandard,Version=v2.0/": {
-      "Xamarin.RGB/1.0.2": {
+      "Xamarin.RGB/2.0.1": {
         "dependencies": {
           "NETStandard.Library": "2.0.3",
           "Xamarin.Forms": "5.0.0.2012"
@@ -41,7 +41,7 @@
     }
   },
   "libraries": {
-    "Xamarin.RGB/1.0.2": {
+    "Xamarin.RGB/2.0.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

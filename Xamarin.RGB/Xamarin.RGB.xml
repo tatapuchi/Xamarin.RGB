@@ -4,186 +4,35 @@
         <name>Xamarin.RGB</name>
     </assembly>
     <members>
-        <member name="T:Xamarin.RGB.ColourizerBase">
+        <member name="P:Xamarin.RGB.IColoured.Speed">
             <summary>
-            Base class for all colourizers.
+            Speed of colour changing in milliseconds.
             </summary>
         </member>
-        <member name="P:Xamarin.RGB.ColourizerBase.ColourizerFlags">
+        <member name="P:Xamarin.RGB.IColoured.Hue">
             <summary>
-            Enum flags for colourizer. 
-            Set to HueCycle by default.
+            Boolean regarding whether the hue of the color should change.
             </summary>
         </member>
-        <member name="P:Xamarin.RGB.ColourizerBase.Hue">
+        <member name="P:Xamarin.RGB.IColoured.Saturation">
             <summary>
-            The current hue value.
+            Boolean regarding whether the saturation of the color should change.
             </summary>
         </member>
-        <member name="P:Xamarin.RGB.ColourizerBase.HueRange">
+        <member name="P:Xamarin.RGB.IColoured.Luminosity">
             <summary>
-            The range of possible hue values to cycle through.
+            Boolean regarding whether the luminosity of the color should change.
             </summary>
         </member>
-        <member name="P:Xamarin.RGB.ColourizerBase.Saturation">
+        <member name="P:Xamarin.RGB.IColoured.Alpha">
             <summary>
-            The current saturation value.
+            Boolean regarding whether the alpha value of the color should change.
             </summary>
         </member>
-        <member name="P:Xamarin.RGB.ColourizerBase.SaturationRange">
+        <member name="P:Xamarin.RGB.IColoured.Style">
             <summary>
-            The range of possible saturation values to cycle through.
+            The way the colour values should change.
             </summary>
-        </member>
-        <member name="P:Xamarin.RGB.ColourizerBase.Lightness">
-            <summary>
-            The current lightness value.
-            </summary>
-        </member>
-        <member name="P:Xamarin.RGB.ColourizerBase.LightnessRange">
-            <summary>
-            The range of possible lightness values to cycle through.
-            </summary>
-        </member>
-        <member name="P:Xamarin.RGB.ColourizerBase.Alpha">
-            <summary>
-            The current alpha value.
-            </summary>
-        </member>
-        <member name="P:Xamarin.RGB.ColourizerBase.AlphaRange">
-            <summary>
-            The range of possible alpha values to cycle through.
-            </summary>
-        </member>
-        <member name="P:Xamarin.RGB.ColourizerBase.Speed">
-            <summary>
-            Speed in milliseconds, of how fast the values cycle.
-            </summary>
-        </member>
-        <member name="T:Xamarin.RGB.ColourizerBase.ColourizationTypes">
-            <summary>
-            An enum defining the different types of colour cycles available.
-            </summary>
-        </member>
-        <member name="F:Xamarin.RGB.ColourizerBase.ColourizationTypes.None">
-            <summary>
-            No colour cycling.
-            </summary>
-        </member>
-        <member name="F:Xamarin.RGB.ColourizerBase.ColourizationTypes.HueCycle">
-            <summary>
-            Cycling of the hue value, through the provided hue range.
-            </summary>
-        </member>
-        <member name="F:Xamarin.RGB.ColourizerBase.ColourizationTypes.SaturationCycle">
-            <summary>
-            Cycling of the saturation value, through the provided saturation range.
-            </summary>
-        </member>
-        <member name="F:Xamarin.RGB.ColourizerBase.ColourizationTypes.LightnessCycle">
-            <summary>
-            Cycling of the lightness value, through the provided lightness range.
-            </summary>
-        </member>
-        <member name="F:Xamarin.RGB.ColourizerBase.ColourizationTypes.AlphaCycle">
-            <summary>
-            Cycling of the alpha value, through the provided alpha range.
-            </summary>
-        </member>
-        <member name="T:Xamarin.RGB.Colourizers.ElementColourizer">
-            <summary>
-            Colourizer class for changing the backgrounds of all Xamarin.Forms controls.
-            </summary>
-        </member>
-        <member name="M:Xamarin.RGB.Colourizers.ElementColourizer.#ctor">
-            <summary>
-            Parameterless constructor
-            </summary>
-        </member>
-        <member name="M:Xamarin.RGB.Colourizers.ElementColourizer.Add(Xamarin.Forms.VisualElement)">
-            <summary>
-            Method used to set an element to be colourized.
-            </summary>
-            <param name="element">Any Xamarin.Forms control.</param>
-        </member>
-        <member name="T:Xamarin.RGB.Colourizers.TextColourizer">
-            <summary>
-            Colourizer class for changing text colour.
-            </summary>
-        </member>
-        <member name="M:Xamarin.RGB.Colourizers.TextColourizer.#ctor">
-            <summary>
-            Parameterless constructor.
-            </summary>
-        </member>
-        <member name="M:Xamarin.RGB.Colourizers.TextColourizer.Add(Xamarin.Forms.VisualElement)">
-            <summary>
-            Method used to set an element's text to be colourized.
-            </summary>
-            <param name="element">Any Xamarin.Forms control that implements ITextElement</param>
-        </member>
-        <member name="T:Xamarin.RGB.Constants">
-            <summary>
-            A class containing useful constants for colour changing.
-            </summary>
-        </member>
-        <member name="F:Xamarin.RGB.Constants.Slow_Speed">
-            <summary>
-            Colours changing at a slow speed.
-            </summary>
-        </member>
-        <member name="F:Xamarin.RGB.Constants.Medium_Speed">
-            <summary>
-            Colours changing at a normal speed.
-            </summary>
-        </member>
-        <member name="F:Xamarin.RGB.Constants.Fast_Speed">
-            <summary>
-            Colours changing at a high speed.
-            </summary>
-        </member>
-        <member name="F:Xamarin.RGB.Constants.Red_Yellow">
-            <summary>
-            Colour range from red to yellow.
-            </summary>
-        </member>
-        <member name="F:Xamarin.RGB.Constants.Green_Blue">
-            <summary>
-            Colour range from green to blue.
-            </summary>
-        </member>
-        <member name="F:Xamarin.RGB.Constants.Purple_Red">
-            <summary>
-            Colour range from purple to red.
-            </summary>
-        </member>
-        <member name="T:Xamarin.RGB.Range">
-            <summary>
-            Struct to define a range in between 0 and 1 for you colour cycling.
-            </summary>
-        </member>
-        <member name="M:Xamarin.RGB.Range.#ctor(System.Double,System.Double)">
-            <summary>
-            Constructor with start and end value parameters for the range.
-            </summary>
-            <param name="start">Start value of your range.</param>
-            <param name="end">End value of your range.</param>
-        </member>
-        <member name="P:Xamarin.RGB.Range.Start">
-            <summary>
-            Start value of the range.
-            </summary>
-        </member>
-        <member name="P:Xamarin.RGB.Range.End">
-            <summary>
-            End value of the range.
-            </summary>
-        </member>
-        <member name="M:Xamarin.RGB.Range.ToString">
-            <summary>
-            ToString() override.
-            </summary>
-            <returns>A string indicating the range.</returns>
         </member>
     </members>
 </doc>

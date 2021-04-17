@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Xamarin.RGB</id>
+    <version>2.0.0</version>
+    <authors>0xB01b</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <icon>Guy.png</icon>
+    <description>A Xamarin plugin to dynamically change colors of an element.
+BackgroundColor, TextColor, PlaceholderColor, enhance your UI.</description>
+    <repository url="https://github.com/tatapuchi/Xamarin.RGB" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Xamarin.Forms" version="5.0.0.2012" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Aorus\source\repos\Xamarin.RGB\Xamarin.RGB\bin\Debug\netstandard2.0\Xamarin.RGB.dll" target="lib\netstandard2.0\Xamarin.RGB.dll" />
+    <file src="C:\Users\Aorus\source\repos\Xamarin.RGB\Xamarin.RGB\bin\Debug\netstandard2.0\Xamarin.RGB.xml" target="lib\netstandard2.0\Xamarin.RGB.xml" />
+    <file src="C:\Users\Aorus\source\repos\Xamarin.RGB\Xamarin.RGB\Images\Guy.png" target="Guy.png" />
+  </files>
+</package>
