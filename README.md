@@ -13,3 +13,9 @@ To apply changing colours to a control, simply put it inside `Colourizer` tags
 <Button Text="Click Me!">
 </Colourizer>
 ```
+
+---
+
+### Background Colour
+
+To cycle through backgroundcolor
