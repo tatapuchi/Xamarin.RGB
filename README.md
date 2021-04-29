@@ -1,7 +1,8 @@
 # Xamarin.RGB
-Xamarin plugin for dynamically updating color
+A Xamarin plugin for dynamically updating color  
+**`NuGet:`** https://www.nuget.org/packages/Xamarin.RGB/
 
-The plugin provides a simplistic ContentView that you can wrap elements in to dynamically change Background, Text and PlaceholderColour.
+A simplistic `ContentView` that you can wrap elements in to dynamically change background, text and placeholder colour.
 
 ## Colouring Elements
 
