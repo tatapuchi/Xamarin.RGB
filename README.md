@@ -5,7 +5,7 @@ The plugin provides a simplistic ContentView that you can wrap elements in to dy
 
 ## Colouring Elements
 
-To apply changing colours to concretions of VisualElement (most controls) you will create a `ElementColourizer` object, and add elements to it.
+To apply changing colours to a control, simply put it inside a <Colourizer>
 
 *SomePage.xaml*
 ```xml
