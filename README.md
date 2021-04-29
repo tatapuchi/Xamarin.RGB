@@ -7,8 +7,9 @@ The plugin provides a simplistic ContentView that you can wrap elements in to dy
 
 To apply changing colours to concretions of VisualElement (most controls) you will create a `ElementColourizer` object, and add elements to it.
 
-*SomePage.xaml.cs*
-```csharp
-ElementColourizer Colourizer = new ElementColourizer();
-Colourizer.Add(NameLabel);
+*SomePage.xaml*
+```xml
+<Colourizer>
+<Button Text="Click Me!">
+</Colourizer>
 ```
